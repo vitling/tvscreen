@@ -1,10 +1,4 @@
-
-
-$(function() {
-   new TvScreen($("#screen"), 720,560).loadContent('<img src="img/two.jpg">');
-});
-
-var TvScreen = function(screenElement, width, height) {
+var TVScreen = function(screenElement, width, height) {
     var container = $(screenElement);
     container.css(
         {"background-color":"black",
@@ -48,6 +42,6 @@ var TvScreen = function(screenElement, width, height) {
     this.interval = window.setInterval(animate,40);
 };
 
-TvScreen.prototype.loadContent = function(htmlContent) {
+TVScreen.prototype.loadContent = function(htmlContent) {
     $(htmlContent).appendTo(this.contentLayers);
 }
